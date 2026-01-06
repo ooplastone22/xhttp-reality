@@ -44,7 +44,7 @@ your.domain.com：用于客户端配置的域名（Cloudflare 为vps解析过的
 /usr/local/etc/xray/client-link.txt
 
 🧹 卸载
-```bash
+
 curl -fsSL https://raw.githubusercontent.com/ooplastone22/xhttp-reality/refs/heads/main/xhttp-reality.sh | bash -s uninstall
 
 📁 文件结构
