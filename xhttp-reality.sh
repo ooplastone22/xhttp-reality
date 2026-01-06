@@ -101,7 +101,10 @@ cat > "$CONFIG_FILE" <<EOF
         ],
         "decryption": "none",
         "fallbacks": [
-          { "dest": $PORT_XHTTP }
+          { 
+            "dest": $PORT_XHTTP
+            "xver": 1
+            }
         ]
       },
       "streamSettings": {
