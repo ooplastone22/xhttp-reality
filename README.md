@@ -15,11 +15,11 @@
 
 # 安装
 
-bash xray-xhttp-reality.sh install <CF_DOMAIN>
+bash xray-xhttp-reality.sh install <Your_DOMAIN>
 
 # 示例：
 
-bash xray-xhttp-reality.sh install xh.example.com
+bash xray-xhttp-reality.sh install your.domain.com
 
 # 卸载
 bash xray-xhttp-reality.sh uninstall
