@@ -1,4 +1,4 @@
-README.md（示例）
+
 # xHTTP + REALITY Auto Installer
 
 > 一个用于快速部署 **xHTTP（上行，经 Cloudflare CDN） + REALITY（下行，直连）**
