@@ -1,6 +1,3 @@
-# xhttp-reality
-one key script to apply xhttp and reality for using CDN xhttp uploading and reality downloading directly
-
 # Xray xhttp + Reality + Cloudflare 一键脚本
 
 ## 特性
