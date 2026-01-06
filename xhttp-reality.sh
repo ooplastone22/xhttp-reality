@@ -64,10 +64,10 @@ install -m 755 /tmp/xray/xray "$XRAY_BIN"
 # REALITY_KEYS=$("$XRAY_BIN" x25519)
 # PRIVATE_KEY=$(echo "$REALITY_KEYS" | awk '/Private/{print $3}')
 # PUBLIC_KEY=$(echo "$REALITY_KEYS" | awk '/Public/{print $3}')
-PRIVATE_KEY=”2MnUNC4Cs0pNVSCg4WDqsJzI5mM0cYzIPZP8rlDpl0A“
-PUBLIC_KEY=”DPssXKi1w8Of_Hus0aFzql3H8Cr4dnz_HQ_oSu5znTY“
+PRIVATE_KEY="2MnUNC4Cs0pNVSCg4WDqsJzI5mM0cYzIPZP8rlDpl0A"
+PUBLIC_KEY="DPssXKi1w8Of_Hus0aFzql3H8Cr4dnz_HQ_oSu5znTY"
 # SHORT_ID=$(openssl rand -hex 4)
-SHORT_ID=“adba013e”
+SHORT_ID="adba013e"
 # ================= 写配置 =================
 cat > "$CONFIG_FILE" <<EOF
 {
