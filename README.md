@@ -17,7 +17,7 @@ one key script to apply xhttp and reality for using CDN xhttp uploading and real
   └─ 下行：reality → VPS:443
 
 # 安装
-```bash
+
 bash xray-xhttp-reality.sh install <CF_DOMAIN>
 
 # 示例：
@@ -50,7 +50,6 @@ xhttp 监听必须是 80 或通过 443 fallback
 
 ## 1️⃣ print-link
 
-```bash
 print_link() {
   cat "$XRAY_DIR/client-link.txt"
   exit 0
