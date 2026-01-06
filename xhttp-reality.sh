@@ -103,7 +103,7 @@ cat > "$CONFIG_FILE" <<EOF
         "fallbacks": [
           { 
             "dest": $PORT_XHTTP
-            "xver": 1
+            # "xver": 1
             }
         ]
       },
