@@ -37,8 +37,26 @@ apt install -y curl unzip jq uuid-runtime openssl
 
 # ================= 安装 Xray =================
 mkdir -p "$XRAY_DIR"
+ARCH=$(uname -m)
 
-curl -fsSL https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -o /tmp/xray.zip
+case "$ARCH" in
+  x86_64|amd64)
+    XRAY_ARCH="64"
+    ;;
+  aarch64|arm64)
+    XRAY_ARCH="arm64-v8a"
+    ;;
+  *)
+    echo "不支持的架构: $ARCH"
+    exit 1
+    ;;
+esac
+
+curl -fsSL \
+  https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-${XRAY_ARCH}.zip \
+  -o /tmp/xray.zip
+
+# curl -fsSL https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -o /tmp/xray.zip
 unzip -qo /tmp/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray "$XRAY_BIN"
 
