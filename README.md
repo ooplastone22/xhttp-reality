@@ -14,7 +14,7 @@
   └─ 下行：reality → VPS:443
 
 # 安装
-
+curl -fsSL https://raw.githubusercontent.com/ooplastone22/xhttp-reality/refs/heads/main/xhttp-reality.sh | bash -s xh.matislawe.nyc.mn
 bash xray-xhttp-reality.sh install <Your_DOMAIN>
 
 # 示例：
