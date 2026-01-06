@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
+SCRIPT_VERSION="0.1.0"
+SCRIPT_NAME="xhttp-reality"
+
+
+if [[ "$1" == "version" ]]; then
+  echo "$SCRIPT_NAME version $SCRIPT_VERSION"
+  exit 0
+fi
+
 
 # ================= 基本配置 =================
 XRAY_DIR="/usr/local/etc/xray"
@@ -35,6 +44,26 @@ require_root() {
     echo "请使用 root 运行"
     exit 1
   fi
+}
+
+update_script() {
+  require_root
+
+  REPO_RAW="https://raw.githubusercontent.com/ooplastone22/xhttp-reality/refs/heads/main/xhttp-reality.sh"
+  TMP_FILE="/tmp/xhttp-reality.sh"
+
+  echo ">>> 检查并更新脚本..."
+
+  curl -fsSL "$REPO_RAW" -o "$TMP_FILE"
+
+  if ! grep -q "SCRIPT_VERSION" "$TMP_FILE"; then
+    echo "下载的脚本无效，取消更新"
+    exit 1
+  fi
+
+  install -m 755 "$TMP_FILE" "$0"
+  echo ">>> 更新完成"
+  exit 0
 }
 
 uninstall_xray() {
@@ -227,6 +256,9 @@ EOJ
 }
 
 case "$ACTION" in
+  update)
+    update_script
+    ;;
   install)
     install_xray
     ;;
@@ -237,6 +269,7 @@ case "$ACTION" in
     echo "用法:"
     echo "  install <CF_DOMAIN>"
     echo "  uninstall"
+    echo "  update"
     exit 1
     ;;
 esac
