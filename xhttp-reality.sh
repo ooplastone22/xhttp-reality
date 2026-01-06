@@ -17,7 +17,7 @@ CONFIG_FILE="$XRAY_DIR/config.json"
 
 DOMAIN_SNI="www.icloud.com"
 
-PORT_XHTTP=8880
+PORT_XHTTP=80
 PORT_REALITY=443
 
 UUID_XHTTP="64c4dd3f-5c99-46dc-b6b8-1bde9cb98edd"
